@@ -1,0 +1,7 @@
+/Users/jannyk/Develop/interviews/insurance-service/common/src/main/java/no/fremtind/insurance/common/dtos/CustomerInfo.java
+/Users/jannyk/Develop/interviews/insurance-service/common/src/main/java/no/fremtind/insurance/common/dtos/enums/InsuranceType.java
+/Users/jannyk/Develop/interviews/insurance-service/common/src/main/java/no/fremtind/insurance/common/dtos/ContractDto.java
+/Users/jannyk/Develop/interviews/insurance-service/common/src/main/java/no/fremtind/insurance/common/dtos/CustomerDto.java
+/Users/jannyk/Develop/interviews/insurance-service/common/src/main/java/no/fremtind/insurance/common/dtos/InsuranceContractRequest.java
+/Users/jannyk/Develop/interviews/insurance-service/common/src/main/java/no/fremtind/insurance/common/dtos/ContractStatusUpdateDto.java
+/Users/jannyk/Develop/interviews/insurance-service/common/src/main/java/no/fremtind/insurance/common/dtos/enums/InsuranceStatus.java
