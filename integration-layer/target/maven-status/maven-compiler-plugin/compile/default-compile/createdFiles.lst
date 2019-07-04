@@ -1,0 +1,16 @@
+no/fremtind/insurance/integrationlayer/config/IntegrationConfig.class
+no/fremtind/insurance/integrationlayer/mockservices/MailService.class
+no/fremtind/insurance/integrationlayer/config/AsyncConfig.class
+no/fremtind/insurance/integrationlayer/dto/CustomerDto$CustomerDtoBuilder.class
+no/fremtind/insurance/integrationlayer/dto/enums/InsuranceType.class
+no/fremtind/insurance/integrationlayer/dto/enums/InsuranceStatus.class
+no/fremtind/insurance/integrationlayer/dto/CustomerInfo.class
+no/fremtind/insurance/integrationlayer/dto/CustomerDto.class
+no/fremtind/insurance/integrationlayer/dto/ContractDto$ContractDtoBuilder.class
+no/fremtind/insurance/integrationlayer/dto/InsuranceContractRequest.class
+no/fremtind/insurance/integrationlayer/dto/ContractDto.class
+no/fremtind/insurance/integrationlayer/dto/ContractStatusUpdateDto$ContractStatusUpdateDtoBuilder.class
+no/fremtind/insurance/integrationlayer/IntegrationLayerApplication.class
+no/fremtind/insurance/integrationlayer/gateway/InsuranceRequestGateway.class
+no/fremtind/insurance/integrationlayer/dto/ContractStatusUpdateDto.class
+no/fremtind/insurance/integrationlayer/web/rest/InsuranceIntegrationResource.class

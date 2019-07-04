@@ -7,9 +7,11 @@
     <artifactId>insurance-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>insurance-service</name>
+    <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
 
     <modules>
+        <module>common</module>
         <module>insurance-client</module>
         <module>integration-layer</module>
     </modules>
@@ -49,5 +51,4 @@
         <developerConnection>scm:git:https://github.com/talk2jk/insurance-demo.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
-
 </project>

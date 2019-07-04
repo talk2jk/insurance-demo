@@ -3,26 +3,32 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:int="http://www.springframework.org/schema/integration"
        xmlns:int-http="http://www.springframework.org/schema/integration/http"
-       xsi:schemaLocation="
-       http://www.springframework.org/schema/beans
+       xmlns:util="http://www.springframework.org/schema/util" xmlns:beans="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/integration
        http://www.springframework.org/schema/integration/spring-integration.xsd
        http://www.springframework.org/schema/integration/http
-       http://www.springframework.org/schema/integration/http/spring-integration-http.xsd">
+       http://www.springframework.org/schema/integration/http/spring-integration-http.xsd
+       http://www.springframework.org/schema/util
+       https://www.springframework.org/schema/util/spring-util.xsd
+       ">
+
+    <int:gateway id="insuranceRequestGateway"
+                 service-interface="no.fremtind.insurance.integrationlayer.gateway.InsuranceRequestGateway"
+                 default-request-channel="requestChannel" />
 
     <int:channel id="requestChannel" />
-    <int:channel id="receiveChannel">
-        <int:queue capacity='10' />
-    </int:channel>
 
-    <int-http:outbound-gateway id="httpOutboundGateway"
-                               request-channel="requestChannel"
-                               url="http://localhost:8088/api/insurances"
-                               http-method="POST"
-                               reply-channel="receiveChannel"
-                               expected-response-type="no.fremtind.insurance.integrationlayer.dto.InsuranceOrderResponse">
+    <!--<int-http:outbound-gateway
+            request-channel="requestChannel"
+            url="http://localhost:8088/api/insurances"
+            http-method="POST"
+            message-converters="converters"
+            expected-response-type="no.fremtind.insurance.integrationlayer.dto.InsuranceOrderResponse">
+    </int-http:outbound-gateway> -->
 
-    </int-http:outbound-gateway>
-
+    <util:list id="converters">
+        <beans:bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+    </util:list>
 </beans>
