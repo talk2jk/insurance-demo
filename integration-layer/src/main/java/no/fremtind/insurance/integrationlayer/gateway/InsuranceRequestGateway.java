@@ -1,6 +1,6 @@
 package no.fremtind.insurance.integrationlayer.gateway;
 
-import no.fremtind.insurance.integrationlayer.dto.*;
+import no.fremtind.insurance.common.dtos.*;
 import org.springframework.integration.annotation.Gateway;
 import org.springframework.integration.annotation.GatewayHeader;
 import org.springframework.integration.annotation.MessagingGateway;

@@ -1,7 +1,7 @@
 package no.fremtind.insurance.integrationlayer.config;
 
-import no.fremtind.insurance.integrationlayer.dto.CustomerDto;
-import no.fremtind.insurance.integrationlayer.dto.ContractDto;
+import no.fremtind.insurance.common.dtos.ContractDto;
+import no.fremtind.insurance.common.dtos.CustomerDto;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

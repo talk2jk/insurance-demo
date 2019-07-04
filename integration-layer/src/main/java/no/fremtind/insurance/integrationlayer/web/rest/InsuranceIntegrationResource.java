@@ -1,11 +1,12 @@
 package no.fremtind.insurance.integrationlayer.web.rest;
 
 import lombok.extern.slf4j.Slf4j;
-import no.fremtind.insurance.integrationlayer.dto.ContractStatusUpdateDto;
-import no.fremtind.insurance.integrationlayer.dto.CustomerDto;
-import no.fremtind.insurance.integrationlayer.dto.InsuranceContractRequest;
-import no.fremtind.insurance.integrationlayer.dto.ContractDto;
-import no.fremtind.insurance.integrationlayer.dto.enums.InsuranceStatus;
+
+import no.fremtind.insurance.common.dtos.ContractDto;
+import no.fremtind.insurance.common.dtos.ContractStatusUpdateDto;
+import no.fremtind.insurance.common.dtos.CustomerDto;
+import no.fremtind.insurance.common.dtos.InsuranceContractRequest;
+import no.fremtind.insurance.common.dtos.enums.InsuranceStatus;
 import no.fremtind.insurance.integrationlayer.gateway.InsuranceRequestGateway;
 import no.fremtind.insurance.integrationlayer.mockservices.MailService;
 import org.springframework.http.ResponseEntity;
