@@ -1,0 +1,12 @@
+
+logging:
+  level:
+    #ROOT: DEBUG
+    no.fremtind.insurance.integrationlayer: INFO
+
+spring:
+  mail:
+    host: localhost
+    port: 25
+    username:
+    password:
