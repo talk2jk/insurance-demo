@@ -1,0 +1,13 @@
+/Users/jannyk/Develop/interviews/insurance-service/integration-layer/src/main/java/no/fremtind/insurance/integrationlayer/config/IntegrationConfig.java
+/Users/jannyk/Develop/interviews/insurance-service/integration-layer/src/main/java/no/fremtind/insurance/integrationlayer/web/rest/InsuranceIntegrationResource.java
+/Users/jannyk/Develop/interviews/insurance-service/integration-layer/src/main/java/no/fremtind/insurance/integrationlayer/dto/ContractDto.java
+/Users/jannyk/Develop/interviews/insurance-service/integration-layer/src/main/java/no/fremtind/insurance/integrationlayer/dto/CustomerInfo.java
+/Users/jannyk/Develop/interviews/insurance-service/integration-layer/src/main/java/no/fremtind/insurance/integrationlayer/dto/enums/InsuranceStatus.java
+/Users/jannyk/Develop/interviews/insurance-service/integration-layer/src/main/java/no/fremtind/insurance/integrationlayer/dto/InsuranceContractRequest.java
+/Users/jannyk/Develop/interviews/insurance-service/integration-layer/src/main/java/no/fremtind/insurance/integrationlayer/gateway/InsuranceRequestGateway.java
+/Users/jannyk/Develop/interviews/insurance-service/integration-layer/src/main/java/no/fremtind/insurance/integrationlayer/IntegrationLayerApplication.java
+/Users/jannyk/Develop/interviews/insurance-service/integration-layer/src/main/java/no/fremtind/insurance/integrationlayer/dto/CustomerDto.java
+/Users/jannyk/Develop/interviews/insurance-service/integration-layer/src/main/java/no/fremtind/insurance/integrationlayer/mockservices/MailService.java
+/Users/jannyk/Develop/interviews/insurance-service/integration-layer/src/main/java/no/fremtind/insurance/integrationlayer/dto/enums/InsuranceType.java
+/Users/jannyk/Develop/interviews/insurance-service/integration-layer/src/main/java/no/fremtind/insurance/integrationlayer/config/AsyncConfig.java
+/Users/jannyk/Develop/interviews/insurance-service/integration-layer/src/main/java/no/fremtind/insurance/integrationlayer/dto/ContractStatusUpdateDto.java

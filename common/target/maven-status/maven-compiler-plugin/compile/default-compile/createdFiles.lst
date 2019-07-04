@@ -1,0 +1,10 @@
+no/fremtind/insurance/common/dtos/enums/InsuranceType.class
+no/fremtind/insurance/common/dtos/enums/InsuranceStatus.class
+no/fremtind/insurance/common/dtos/ContractStatusUpdateDto.class
+no/fremtind/insurance/common/dtos/ContractDto.class
+no/fremtind/insurance/common/dtos/ContractStatusUpdateDto$ContractStatusUpdateDtoBuilder.class
+no/fremtind/insurance/common/dtos/ContractDto$ContractDtoBuilder.class
+no/fremtind/insurance/common/dtos/InsuranceContractRequest.class
+no/fremtind/insurance/common/dtos/CustomerDto.class
+no/fremtind/insurance/common/dtos/CustomerDto$CustomerDtoBuilder.class
+no/fremtind/insurance/common/dtos/CustomerInfo.class

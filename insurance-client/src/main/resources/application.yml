@@ -1,0 +1,4 @@
+client:
+  integrationLayer:
+    baseUri: http://localhost:8088/api
+    version: v1
