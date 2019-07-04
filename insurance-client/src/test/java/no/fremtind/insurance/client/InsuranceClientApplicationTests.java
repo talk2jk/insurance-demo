@@ -1,4 +1,4 @@
-package no.fremtind.insurance.insuranceclient;
+package no.fremtind.insurance.client;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,5 +12,4 @@ public class InsuranceClientApplicationTests {
     @Test
     public void contextLoads() {
     }
-
 }
