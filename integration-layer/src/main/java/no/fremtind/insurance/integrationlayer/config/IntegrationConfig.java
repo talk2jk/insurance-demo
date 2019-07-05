@@ -19,7 +19,7 @@ public class IntegrationConfig {
     private final String EXTERNAL_API_URI = "http://localhost:8088/api";
 
     @Bean
-    @ServiceActivator(inputChannel = "contracts.input")
+    @ServiceActivator(inputChannel = "contracts.outbound")
     public HttpRequestExecutingMessageHandler insuranceCreateOutboundRequest() {
 
         HttpRequestExecutingMessageHandler handler =
@@ -32,7 +32,7 @@ public class IntegrationConfig {
 
     @Bean
     public IntegrationFlow insuranceCustomerOutboundRequest() {
-        return IntegrationFlows.from("customers.input")
+        return IntegrationFlows.from("customers.outbound")
                 .handle(Http.outboundGateway(EXTERNAL_API_URI+ "/customers")
                         .httpMethod(HttpMethod.POST)
                         .expectedResponseType(CustomerDto.class))
@@ -41,10 +41,20 @@ public class IntegrationConfig {
 
     @Bean
     public IntegrationFlow insuranceStatusUpdateRequest() {
-        return IntegrationFlows.from("contracts.update.inout")
+        return IntegrationFlows.from("contracts.update.outbound")
                 .handle(Http.outboundGateway(EXTERNAL_API_URI + "/insurances/{contractNumber}/status")
                         .httpMethod(HttpMethod.PUT)
                         .uriVariable("contractNumber", "payload.getContractNumber()")
+                        .expectedResponseType(ContractDto.class))
+                .get();
+    }
+
+    @Bean
+    public IntegrationFlow contractRetrievalRequest() {
+        return IntegrationFlows.from("contracts.retrieve.outbound")
+                .handle(Http.outboundGateway(EXTERNAL_API_URI + "/insurances/{contractNumber}")
+                        .httpMethod(HttpMethod.GET)
+                        .uriVariable("contractNumber", "payload")
                         .expectedResponseType(ContractDto.class))
                 .get();
 

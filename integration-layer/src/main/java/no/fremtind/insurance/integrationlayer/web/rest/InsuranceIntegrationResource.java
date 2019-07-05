@@ -7,33 +7,31 @@ import no.fremtind.insurance.common.dtos.ContractStatusUpdateDto;
 import no.fremtind.insurance.common.dtos.CustomerDto;
 import no.fremtind.insurance.common.dtos.InsuranceContractRequest;
 import no.fremtind.insurance.common.dtos.enums.InsuranceStatus;
-import no.fremtind.insurance.integrationlayer.gateway.InsuranceRequestGateway;
+import no.fremtind.insurance.integrationlayer.gateway.InsuranceApiGateway;
 import no.fremtind.insurance.integrationlayer.mockservices.MailService;
 import org.springframework.http.ResponseEntity;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.net.URI;
 
 @Slf4j
 @RestController
 @RequestMapping("/api")
 public class InsuranceIntegrationResource {
 
-    private final InsuranceRequestGateway gateway;
+    private final InsuranceApiGateway gateway;
     private final MailService mailService;
 
-    public InsuranceIntegrationResource(InsuranceRequestGateway gateway, MailService mailService) {
+    public InsuranceIntegrationResource(InsuranceApiGateway gateway, MailService mailService) {
         this.gateway = gateway;
         this.mailService = mailService;
     }
 
     @PostMapping("/insurance-contracts")
     public ResponseEntity<ContractDto> createInsurance(@RequestBody @Valid InsuranceContractRequest request) {
-        log.info("REST request to place Insurance order: {}", request);
+        log.info("REST request to create Insurance contract: {}", request);
 
         // TODO- retrieve or create a customer
         CustomerDto customer = gateway.createOrGetCustomer(request.getCustomerInfo());
@@ -64,6 +62,15 @@ public class InsuranceIntegrationResource {
                         .status(InsuranceStatus.SENT).build());
 
         // return contract info (contract Number, contract Status) to client application
-        return ResponseEntity.ok(updatedContract);
+        return ResponseEntity
+                .created(URI.create("/api/insurance-contracts/"+ updatedContract.getContractNumber()))
+                .body(updatedContract);
+    }
+
+    @GetMapping("/insurance-contracts/{contractNumber}")
+    public ResponseEntity<ContractDto> getByContractNumber(@PathVariable String contractNumber) {
+        log.info("REST request to retrieve an insurance-contract resource with ID: {}", contractNumber);
+
+        return ResponseEntity.ok(gateway.getContractByContractNumber(contractNumber));
     }
 }

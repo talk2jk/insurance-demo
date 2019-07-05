@@ -15,7 +15,7 @@
        ">
 
     <int:gateway id="insuranceRequestGateway"
-                 service-interface="no.fremtind.insurance.integrationlayer.gateway.InsuranceRequestGateway"
+                 service-interface="no.fremtind.insurance.integrationlayer.gateway.InsuranceApiGateway"
                  default-request-channel="requestChannel" />
 
     <int:channel id="requestChannel" />
